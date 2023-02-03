@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OO/Mf9ry+21hkNjKE1IOZbLXoh/ivk0/pR83nxUfSuwhxZOAF5uvq+0hsEOVwO2uAmhBsPdQ9ZMJlepnysMlgw==",
+  "dgSpecHash": "7mFzjFOcuvI/cQYYX7NgZ2ITmXICnXNODS/uq0P4rULB++7aoAxUTHX6HLhvLVNbEu5K0ptvW/bLYeeC+wDEKQ==",
   "success": true,
-  "projectFilePath": "C:\\Leo\\Projetos\\Mvc Projects\\CadastroDeContatos\\CadastroDeContatos\\CadastroDeContatos.csproj",
+  "projectFilePath": "C:\\Leo\\Projetos\\Projetos em MVC\\CadastroDeContatos\\CadastroDeContatos\\CadastroDeContatos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\leopc\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\leopc\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\5.0.17\\microsoft.aspnetcore.mvc.razor.extensions.5.0.17.nupkg.sha512",
