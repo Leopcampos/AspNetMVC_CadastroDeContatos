@@ -9,6 +9,21 @@
     <h1 class="display-4">Editar contatos</h1>
 </div>
 
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["MensagemSucesso"]
+    </div>
+}
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["MensagemErro"]
+    </div>
+}
+
 <form asp-controller="Contato" asp-action="Alterar" method="post">
 
     <input type="hidden" asp-for="Id"/>
@@ -16,16 +31,19 @@
     <div class="form-group">
         <label for="nome">Nome</label>
         <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do contato">
+        <span asp-validation-for="Nome" class="text-danger"></span>
     </div>
 
     <div class="form-group">
         <label for="email">E-mail</label>
         <input type="text" asp-for="Email" class="form-control" placeholder="Digite o e-mail do contato">
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
 
     <div class="form-group">
         <label for="celular">Celular</label>
         <input type="text" asp-for="Celular" class="form-control" placeholder="Digite o celular do contato">
+        <span asp-validation-for="Celular" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-primary btn-block">Alterar</button>
     <a class="btn btn-secondary btn-block" asp-controller="Contato" asp-action="Index" role="button">Voltar</a>
