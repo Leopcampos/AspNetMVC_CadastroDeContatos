@@ -2,6 +2,7 @@
 using CadastroDeContatos.Repositório;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 
 namespace CadastroDeContatos.Controllers
 {
@@ -16,7 +17,7 @@ namespace CadastroDeContatos.Controllers
 
         public IActionResult Index()
         {
-            var contatos = _contatoRepositorio.BuscarTodos();
+            List<ContatoModel> contatos = _contatoRepositorio.BuscarTodos();
             return View(contatos);
         }
 
@@ -48,7 +49,7 @@ namespace CadastroDeContatos.Controllers
 
         public IActionResult Editar(int id)
         {
-            ContatoModel contato = _contatoRepositorio.ListarPorId(id);
+            ContatoModel contato = _contatoRepositorio.BuscarPorId(id);
             return View(contato);
         }
 
@@ -74,7 +75,7 @@ namespace CadastroDeContatos.Controllers
 
         public IActionResult ApagarConfirmacao(int id)
         {
-            ContatoModel contato = _contatoRepositorio.ListarPorId(id);
+            ContatoModel contato = _contatoRepositorio.BuscarPorId(id);
             return View(contato);
         }
 

@@ -788,3 +788,5 @@ C:\Leo\Projetos\Projetos em MVC\CadastroDeContatos\CadastroDeContatos\obj\Debug\
 C:\Leo\Projetos\Projetos em MVC\CadastroDeContatos\CadastroDeContatos\obj\Debug\net5.0\CadastroDeContatos.pdb
 C:\Leo\Projetos\Projetos em MVC\CadastroDeContatos\CadastroDeContatos\obj\Debug\net5.0\CadastroDeContatos.genruntimeconfig.cache
 C:\Leo\Projetos\Projetos em MVC\CadastroDeContatos\CadastroDeContatos\obj\Debug\net5.0\ref\CadastroDeContatos.dll
+C:\Leo\Projetos\Projetos em MVC\CadastroDeContatos\CadastroDeContatos\obj\Debug\net5.0\Razor\Views\Usuario\Index.cshtml.g.cs
+C:\Leo\Projetos\Projetos em MVC\CadastroDeContatos\CadastroDeContatos\obj\Debug\net5.0\Razor\Views\Usuario\Criar.cshtml.g.cs
