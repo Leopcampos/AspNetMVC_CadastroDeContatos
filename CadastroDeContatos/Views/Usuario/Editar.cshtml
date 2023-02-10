@@ -2,14 +2,32 @@
 @model UsuarioModel
 
 @{
-    ViewData["Title"] = "Criar usuário";
+    ViewData["Title"] = "Editar usuário";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Cadastrar usuário</h1>
+
+    <h1 class="display-4">Editar usuário;</h1>
 </div>
 
-<form asp-controller="Usuario" asp-action="Criar" method="post">
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["MensagemSucesso"]
+    </div>
+}
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<form asp-controller="Usuario" asp-action="Editar" method="post">
+
+    <input type="hidden" asp-for="Id" />
 
     <div class="form-group">
         <label for="nome">Nome</label>
@@ -18,7 +36,7 @@
     </div>
 
     <div class="form-group">
-        <label for="email">E-mail</label>
+        <label for="nome">E-mail</label>
         <input type="text" asp-for="Email" class="form-control" placeholder="Digite o e-mail do usuário">
         <span asp-validation-for="Email" class="text-danger"></span>
     </div>
@@ -39,12 +57,6 @@
         <span asp-validation-for="Perfil" class="text-danger"></span>
     </div>
 
-    <div class="form-group">
-        <label for="senha">Senha</label>
-        <input type="password" asp-for="Senha" class="form-control" placeholder="Digite a senha do usuário">
-        <span asp-validation-for="Senha" class="text-danger"></span>
-    </div>
-
-    <button type="submit" class="btn btn-primary btn-block">Adicionar</button>
+    <button type="submit" class="btn btn-primary btn-block">Editar</button>
     <a class="btn btn-secondary btn-block" asp-controller="Usuario" asp-action="Index" role="button">Voltar</a>
 </form>

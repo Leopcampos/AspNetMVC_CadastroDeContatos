@@ -15,6 +15,11 @@ namespace CadastroDeContatos.Repositório
             _context = bancoContext;
         }
 
+        public UsuarioModel BuscarPorLogin(string login)
+        {
+            return _context.Usuarios.FirstOrDefault(x => x.Login == login);
+        }
+
         public List<UsuarioModel> BuscarTodos()
         {
             return _context.Usuarios.ToList();
