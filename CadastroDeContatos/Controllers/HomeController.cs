@@ -1,4 +1,5 @@
-﻿using CadastroDeContatos.Models;
+﻿using CadastroDeContatos.Filters;
+using CadastroDeContatos.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace CadastroDeContatos.Controllers
 {
+    [PaginaParaUsuarioLogado]
     public class HomeController : Controller
     {
         public IActionResult Index()

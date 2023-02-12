@@ -795,3 +795,4 @@ C:\Leo\Projetos\Projetos em MVC\CadastroDeContatos\CadastroDeContatos\obj\Debug\
 C:\Leo\Projetos\Projetos em MVC\CadastroDeContatos\CadastroDeContatos\obj\Debug\net5.0\Razor\Views\Login\Index.cshtml.g.cs
 C:\Leo\Projetos\Projetos em MVC\CadastroDeContatos\CadastroDeContatos\obj\Debug\net5.0\Razor\Views\Shared\_LayoutDeslogado.cshtml.g.cs
 C:\Leo\Projetos\Projetos em MVC\CadastroDeContatos\CadastroDeContatos\obj\Debug\net5.0\Razor\Views\Shared\Components\Menu\Default.cshtml.g.cs
+C:\Leo\Projetos\Projetos em MVC\CadastroDeContatos\CadastroDeContatos\obj\Debug\net5.0\Razor\Views\Restrito\Index.cshtml.g.cs
