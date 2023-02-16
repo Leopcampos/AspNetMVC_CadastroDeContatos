@@ -68,7 +68,7 @@ namespace CadastroDeContatos.Controllers
                     {
                         Id = usuarioSemSenhaModel.Id,
                         Nome = usuarioSemSenhaModel.Nome,
-                        //Email = usuarioSemSenhaModel.Email,
+                        Email = usuarioSemSenhaModel.Email,
                         Login = usuarioSemSenhaModel.Login,
                         Perfil = usuarioSemSenhaModel.Perfil
                     };

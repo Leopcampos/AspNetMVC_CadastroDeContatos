@@ -20,6 +20,11 @@ namespace CadastroDeContatos.Repositório
             return _context.Usuarios.FirstOrDefault(x => x.Login == login);
         }
 
+        public UsuarioModel BuscarPorEmaileLogin(string email, string login)
+        {
+            return _context.Usuarios.FirstOrDefault(x => x.Email == email && x.Login == login);
+        }
+
         public List<UsuarioModel> BuscarTodos()
         {
             return _context.Usuarios.ToList();
@@ -68,6 +73,6 @@ namespace CadastroDeContatos.Repositório
             _context.SaveChanges();
 
             return true;
-        }
+        }   
     }
 }
