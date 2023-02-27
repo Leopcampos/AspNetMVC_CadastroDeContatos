@@ -89,8 +89,8 @@ namespace CadastroDeContatos.Controllers
 
         public IActionResult ApagarConfirmacao(int id)
         {
-            UsuarioModel usuario1 = _usuarioRepositorio.BuscarPorId(id);
-            return View(usuario1);
+            UsuarioModel usuario = _usuarioRepositorio.BuscarPorId(id);
+            return View(usuario);
         }
 
         public IActionResult Apagar(int id)

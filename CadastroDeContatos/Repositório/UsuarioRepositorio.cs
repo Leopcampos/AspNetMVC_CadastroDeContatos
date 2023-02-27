@@ -52,7 +52,7 @@ namespace CadastroDeContatos.Repositório
 
             usuarioDB.Nome = usuario.Nome;
             usuarioDB.Email = usuario.Email;
-            usuarioDB.Email = usuario.Login;
+            usuarioDB.Login = usuario.Login;
             usuarioDB.Perfil = usuario.Perfil;
             usuarioDB.DataAtualizacao = DateTime.Now;
 
