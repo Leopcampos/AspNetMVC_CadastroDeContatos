@@ -1,5 +1,5 @@
 ﻿@using CadastroDeContatos.Enums;
-@model UsuarioModel
+@model AlterarSenhaModel
 
 @{
     ViewData["Title"] = "Alterar senha do usuário";
@@ -10,14 +10,42 @@
     <h1 class="display-4">@ViewData["Title"]</h1>
 </div>
 
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
+        @TempData["MensagemErro"]
+    </div>
+}
+
 <form asp-controller="AlterarSenha" asp-action="Alterar" method="post">
 
     <div class="form-group">
-        <label for="nome">SenhaAtual</label>
-        <input type="text" asp-for="SenhaAtual" class="form-control" placeholder="Digite a senha atual do usuário">
+        <label for="senhaAtual">Senha Atual</label>
+        <input type="password" asp-for="SenhaAtual" class="form-control" placeholder="Digite a senha atual do usuário">
         <span asp-validation-for="SenhaAtual" class="text-danger"></span>
     </div>
 
-    <button type="submit" class="btn btn-primary btn-block">Editar</button>
-    <a class="btn btn-secondary btn-block" asp-controller="Usuario" asp-action="Index" role="button">Voltar</a>
+    <div class="form-group">
+        <label for="novaSenha">Nova Senha</label>
+        <input type="password" asp-for="NovaSenha" class="form-control" placeholder="Digite a nova senha do usuário">
+        <span asp-validation-for="NovaSenha" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="confirmarSenha">Confirmar Nova Senha</label>
+        <input type="password" asp-for="ConfirmarNovaSenha" class="form-control" placeholder="Confirme a nova senha do usuário">
+        <span asp-validation-for="ConfirmarNovaSenha" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">Alterar</button>
+    <a class="btn btn-secondary btn-block" asp-controller="Home" asp-action="Index" role="button">Voltar</a>
 </form>
