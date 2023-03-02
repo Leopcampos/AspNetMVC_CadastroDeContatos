@@ -1,5 +1,6 @@
 ﻿using CadastroDeContatos.Data;
 using CadastroDeContatos.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,9 @@ namespace CadastroDeContatos.Repositório
 
         public List<UsuarioModel> BuscarTodos()
         {
-            return _context.Usuarios.ToList();
+            return _context.Usuarios
+                .Include(x => x.Contatos)
+                .ToList();
         }
 
         public UsuarioModel BuscarPorId(int id)
